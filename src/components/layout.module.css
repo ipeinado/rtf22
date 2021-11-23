@@ -1,0 +1,75 @@
+.banner {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.brand {
+  height: 5rem;
+  margin-left: -0.1875rem;
+  padding-top: 0.75rem;
+  z-index: 20;
+}
+
+.nav {
+  display: flex;
+  height: 5rem;
+  margin-right: -1.25rem;
+}
+
+.navLinks {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin-top: 0;
+}
+
+.navLinkItem {
+  background-color: #fff;
+}
+
+.navLinkText {
+  background-color: #fff;
+  color: #000;
+  min-height: 3.125rem;
+  padding: 0 1.25rem;
+}
+
+.navLinkText:hover {
+  background-color: yellow;
+}
+
+.container {
+  margin: auto;
+  max-width: 992px;
+  font-family: sans-serif;
+}
+
+.footer {
+  background-color: #000;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto auto 0;
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+}
+
+.footerLinks {
+  margin: 0 auto;
+}
+
+.footerLinkItem {
+  display: inline-block;
+}
+
+.footerLinkText {
+  padding: 1em;
+  color: #fff;
+}
+
