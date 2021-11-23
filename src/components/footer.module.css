@@ -1,0 +1,21 @@
+.footer {
+    background-color: #000;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto auto 0;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+  }
+  
+  .footerLinks {
+    margin: 0 auto;
+  }
+  
+  .footerLinkItem {
+    display: inline-block;
+  }
+  
+  .footerLinkText {
+    padding: 1em;
+    color: #fff;
+  }

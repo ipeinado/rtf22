@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://raisingthefloor.org",
     title: "Raising the Floor",
+    shortTitle: "RtF"
   },
   plugins: [
     "gatsby-plugin-netlify-cms",
@@ -33,6 +34,20 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "content",
+        path: "./src/content/"
+      },
+      __key: "content"
+    },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      }
     },
   ],
 };

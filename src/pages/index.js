@@ -1,15 +1,24 @@
 import * as React from "react"
-import Layout from '../components/layout'
-
 import { Link } from 'gatsby'
+
+import Header from '../components/header'
+import Footer from '../components/footer'
+
+import {
+  mainBanner
+} from './index.module.css'
 
 const IndexPage = () => {
   return (
-    <Layout pageTitle="Home">
-      <section role="banner" className="container-fluid">
-        <h1>Digital Inclusion Matters</h1>
+    <div>
+      <Header></Header>
+
+      <section role="banner" className={mainBanner}>
+        <div class="container">
+          <h1>Digital Inclusion Matters</h1>
+        </div>
       </section>
-      <section>
+      <section className="container">
       <p><span role="heading" aria-level="2">15% of the population</span> is affected by some form of disability, and many of these people are not able to benefit from the use of technologies as their peers do. Moreover, most of us are or will be affected as well during our lives, whether it's due to an injury, illness or aging.</p>
       
       We need an inclusive approach that promotes one-size-fits-one digital experiences, an open, collaborative and empowering approach.
@@ -24,7 +33,9 @@ const IndexPage = () => {
         <p>Morphic makes computers easier to use by helping you take control of your computer experience.</p>
         <p><a className="home-button" href="https://morphic.org/" title="Try Morphic">Try it now!</a></p>
       </section>
-    </Layout>
+
+      <Footer></Footer>
+    </div>
   )
 }
 
