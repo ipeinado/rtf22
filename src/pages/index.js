@@ -4,6 +4,8 @@ import { Link } from 'gatsby'
 import Header from '../components/header'
 import Footer from '../components/footer'
 
+import { Helmet } from "react-helmet"
+
 import {
   mainBanner
 } from './index.module.css'
@@ -11,7 +13,14 @@ import {
 const IndexPage = () => {
   return (
     <div>
-      <Header></Header>
+
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Welcome to Raising the Floor</title>
+        <meta name="description" content="Raising the Floor is an international organization working on digital inclusion for all"></meta>
+      </Helmet>
+
+      <Header page="RtF"></Header>
 
       <section role="banner" className={mainBanner}>
         <div class="container">

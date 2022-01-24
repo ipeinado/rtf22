@@ -1,0 +1,106 @@
+.menu-item {
+  display: block;
+  margin-bottom: 0;
+}
+
+.menu-toggle {
+  background-color: #fff;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #eee;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: .875rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.menu-toggle[active="active"],
+.sub-menu > li > a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+  text-decoration-color: rgb(245,190,56);
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus,
+.menu-toggle[aria-expanded="true"] {
+  background-color: rgb(245,190,56);
+  text-decoration-color: #000;
+}
+
+.sub-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  min-width: 12rem;
+  background-color: #fff;
+  z-index: 101;
+  visibility: 0;
+  opacity: 0;
+  height: 0;
+  display: none;;
+  border: 1px solid #eee;
+  background-color: #fff;
+  transition: height 1s ease-in-out .3s,
+              opacity .5s ease-in-out 0s;
+}
+
+.menu-toggle[aria-expanded="true"] + .sub-menu {
+  display: block;
+  visibility: 1;
+  opacity: 1;
+  height: auto;
+}
+
+
+.sub-menu > li:not(:last-child) {
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #eee;
+}
+
+.sub-menu > li > a {
+  display: block;
+  color: rgba(0, 0, 0, .95);
+  text-decoration: none;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.sub-menu > li > a:hover,
+.sub-menu > li > a:focus{
+  background-color: rgb(245,190,56);
+}
+
+@media screen and (max-width: 1199px) {
+  .menu-toggle {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .menu-item {
+    display: inline-block;
+    position: relative;
+  }
+
+  .menu-toggle {
+    border-bottom: none;
+  }
+
+  .sub-menu {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+  }
+}

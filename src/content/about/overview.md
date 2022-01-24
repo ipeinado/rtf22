@@ -1,7 +1,6 @@
 ---
-slug: /who-we-are
 date: "22-11-2021"
-title: "Who We Are"
+title: "About Us"
 ---
 
 Raising the Floor is an international organization committed to the advancement of social equity through digital inclusion. In our research, design and development work we consider the full range of human diversity with respect to ability, language, culture, gender, age, and other forms of human difference.

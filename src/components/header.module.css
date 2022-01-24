@@ -1,46 +1,239 @@
 .banner {
-  width: 100%;
-  margin: 0 1rem;  
-}
-
-.bannerContent {
+  /* margin: 0 1rem;  
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   align-items: center;
-  justify-content: space-between;
-  padding: 0;
   margin-left: auto;
   margin-right: auto;
-  max-width: 992px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between; */  
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  /* border-bottom: 1px solid #eee; */
 }
 
 .brand {
-  margin-left: -0.1875rem;
+  display: block;
+  margin-left: 1rem;
+}
+
+.brand img {
   padding-top: 0.75rem;
-  z-index: 20;
+  z-index: 20; 
+  width: 180px;
 }
-  
+
+.brand > svg:hover {
+  fill: rgb(245,190,56);
+}
+
+.menu-toggle {
+  display: inline-block;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgb(245,190,56);
+}
+
+.menu-toggle > svg {
+  margin-right: .3rem;
+}
+
+.menu-toggle[aria-expanded="true"] {
+  background-color: rgb(245,190,56);
+}
+
+.menu-toggle[aria-expanded="true"] + .navbar-collapse {
+  display: block;
+  height: auto;
+}
+
 .nav {
-  display: flex;
+  margin-left: auto;
+  margin-right: 1rem;
 }
-  
-.navLinks {
-  display: flex;
-  flex-direction: row;
+
+.navbar-collapse > h2 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.nav-links {
+  margin: 0;
+  padding: 0;
   list-style: none;
+  width: 100%;
 }
   
-.navLinkItem {
+.nav-link-item {
   background-color: #fff;
+  margin-bottom: 0;
+}
+
+.nav-link-item > button {
+  text-align: left;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-link-item > button > svg {
+  margin-left: .5rem;
+}
+
+.nav-link-item > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link-item > ul > li {
+  margin-bottom: 0;
+}
+
+.nav-link-item > ul > li > a {
+  text-decoration: none;
+  display: block;
+  color: rgba(0, 0, 0, .9);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: .3rem;
+  padding-bottom: .3rem;
 }
   
-.navLinkText {
+.nav-link-text {
   background-color: #fff;
+  display: block;
   color: #000;
-  padding: 1.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-decoration: none;
+  font-size: .875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-link-text[aria-current="page"]{
+  font-weight: bold;
+}
+
+.nav-link-item > ul > li > a[aria-current="page"] {
+  background-color: #fff;
+  font-weight: bold;
 }
   
-.navLinkText:hover {
-  background-color: yellow;
+.nav-link-text:hover,
+.nav-link-text:focus {
+  background-color: rgb(245,190,56);
+  outline: none;
+}
+
+@media screen and (max-width: 1199px) {
+  .brand svg {
+    width: 180px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .nav-link-item {
+    width: 100%;
+  }
+
+  .nav-link-text {
+    border-bottom: 1px solid #eee;
+  }
+
+  .navbar-toggle {
+    font-size: .9rem;
+  }
+
+  .navbar-collapse {
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    top: 101px;
+    background-color: #fff;
+    animation: height 1s ease-in-out;
+    border-bottom: 1px solid #eee;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .brand svg {
+    width: 240px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav {
+    height: 3.275rem;
+  }
+
+  .navbar-collapse {
+    display: block;
+    height: 5rem;
+  }
+
+  .navbar-collapse > h2 {
+    display: none;
+  }
+
+  .nav-link-item {
+    width: auto;
+    display: inline-block;
+  }
+
+  .nav-link-text {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: .875rem;
+    font-weight: 600;
+  }
+
+  .nav-link-text[aria-current="page"] {
+    text-decoration: underline;
+    text-decoration-color: rgb(245,190,56);
+    text-decoration-thickness: .25em;
+  }
+
+  .sub-menu {
+    border: 1px solid rgb(245,190,56);
+    position: absolute;
+    width: 220px;
+  }
+  
+}
+
+@media screen and (max-width: 576px) {
+  .brand svg {
+    width: 128px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .menu-toggle {
+    font-size: .9rem;
+  }
+
+  .nav {
+    height: 2rem;
+  }
 }

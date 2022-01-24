@@ -1,5 +1,4 @@
 ---
-slug: /get-involved
 title: Get Involved
 ---
 We are always looking for opportunities to collaborate with people and organizations with whom we share the values of digital inclusion for social impact.
